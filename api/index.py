@@ -6,6 +6,10 @@ import io
 app = Flask(__name__)
 CORS(app)  # Enable CORS for all routes
 
+@app.route('/')
+def home():
+    return "Hello, World!"
+
 @app.route('/plot', methods=['POST'])
 def plot():
     # Receive data from frontend
